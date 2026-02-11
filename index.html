@@ -1,11 +1,242 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test</title>
+    <title>烬余的个人网站</title>
+    <!-- 引入图标库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css"> <!-- 新增这行 -->
 </head>
 <body>
-    <h1>hello world</h1>
+    <!-- 导航栏 -->
+    <nav>
+        <div class="nav-container container">
+            <div class="nav-logo">烬余</div>
+            <div class="nav-toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <a href="#quote">引言</a>
+                <a href="#profile">关于我</a>
+                <a href="#experience">人生经历</a>
+                <a href="#hobbies">爱好</a>
+                <a href="#skills">技能</a>
+                <a href="#works">作品</a>
+                <a href="#doing">正在做什么</a>
+                <a href="#contact">联系方式</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 引言部分 -->
+    <section class="quote" id="quote">
+        <div class="container">
+            <p class="quote-text">人生如逆旅，我亦是行人</p>
+            <p class="quote-author">—— 苏轼</p>
+        </div>
+    </section>
+
+    <!-- 个人信息 -->
+    <section id="profile" class="container">
+        <h2 class="section-title">关于我</h2>
+        <div class="profile">
+            <img src="https://via.placeholder.com/200" alt="个人头像" class="profile-avatar">
+            <div class="profile-info">
+                <h3 class="profile-name">烬余</h3>
+                <p class="profile-desc">
+                    热爱生活，勇于探索未知的领域。对技术充满热情，喜欢在代码的世界里寻找解决问题的乐趣。
+                    相信持续学习是成长的唯一途径，始终保持对新事物的好奇心。
+                    性格沉稳，做事专注，注重细节，同时也懂得享受生活中的小美好。
+                </p>
+                <button class="action-btn" id="moreInfoBtn">查看更多</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 人生经历 -->
+    <section id="experience" class="container">
+        <h2 class="section-title">人生经历</h2>
+        <div class="timeline">
+            <div class="timeline-item timeline-left">
+                <div class="timeline-content">
+                    <div class="timeline-date">2010 - 2014</div>
+                    <h3 class="timeline-title">大学时光</h3>
+                    <p class="timeline-desc">就读于XX大学计算机专业，打下扎实的编程基础，参与多个校园项目开发，获得校级编程竞赛奖项。</p>
+                </div>
+            </div>
+            <div class="timeline-item timeline-right">
+                <div class="timeline-content">
+                    <div class="timeline-date">2014 - 2018</div>
+                    <h3 class="timeline-title">初入职场</h3>
+                    <p class="timeline-desc">加入XX科技公司担任前端开发工程师，负责企业官网和移动端H5开发，熟练掌握HTML/CSS/JS等技术栈。</p>
+                </div>
+            </div>
+            <div class="timeline-item timeline-left">
+                <div class="timeline-content">
+                    <div class="timeline-date">2018 - 2022</div>
+                    <h3 class="timeline-title">成长进阶</h3>
+                    <p class="timeline-desc">担任高级前端工程师，主导多个大型项目的前端架构设计，引入Vue/React等框架，提升团队开发效率。</p>
+                </div>
+            </div>
+            <div class="timeline-item timeline-right">
+                <div class="timeline-content">
+                    <div class="timeline-date">2022 - 至今</div>
+                    <h3 class="timeline-title">自由探索</h3>
+                    <p class="timeline-desc">成为自由开发者，专注于个人项目创作和技术分享，探索全栈开发领域，持续学习新技术。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 爱好 -->
+    <section id="hobbies" class="container">
+        <h2 class="section-title">我的爱好</h2>
+        <div class="hobbies">
+            <div class="hobby-item">
+                <div class="hobby-icon"><i class="fas fa-book"></i></div>
+                <h3 class="hobby-name">阅读</h3>
+            </div>
+            <div class="hobby-item">
+                <div class="hobby-icon"><i class="fas fa-code"></i></div>
+                <h3 class="hobby-name">编程</h3>
+            </div>
+            <div class="hobby-item">
+                <div class="hobby-icon"><i class="fas fa-music"></i></div>
+                <h3 class="hobby-name">音乐</h3>
+            </div>
+            <div class="hobby-item">
+                <div class="hobby-icon"><i class="fas fa-hiking"></i></div>
+                <h3 class="hobby-name">徒步</h3>
+            </div>
+            <div class="hobby-item">
+                <div class="hobby-icon"><i class="fas fa-camera"></i></div>
+                <h3 class="hobby-name">摄影</h3>
+            </div>
+            <div class="hobby-item">
+                <div class="hobby-icon"><i class="fas fa-gamepad"></i></div>
+                <h3 class="hobby-name">游戏</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- 技能图谱 -->
+    <section id="skills" class="container">
+        <h2 class="section-title">技能图谱</h2>
+        <div class="skills">
+            <div class="skill-item">
+                <h3 class="skill-name">HTML/CSS</h3>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 95%;"></div>
+                </div>
+                <div class="skill-percent">95%</div>
+            </div>
+            <div class="skill-item">
+                <h3 class="skill-name">JavaScript</h3>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 90%;"></div>
+                </div>
+                <div class="skill-percent">90%</div>
+            </div>
+            <div class="skill-item">
+                <h3 class="skill-name">Vue.js</h3>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 85%;"></div>
+                </div>
+                <div class="skill-percent">85%</div>
+            </div>
+            <div class="skill-item">
+                <h3 class="skill-name">React</h3>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 80%;"></div>
+                </div>
+                <div class="skill-percent">80%</div>
+            </div>
+            <div class="skill-item">
+                <h3 class="skill-name">Node.js</h3>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 75%;"></div>
+                </div>
+                <div class="skill-percent">75%</div>
+            </div>
+            <div class="skill-item">
+                <h3 class="skill-name">UI/UX设计</h3>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 70%;"></div>
+                </div>
+                <div class="skill-percent">70%</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 作品展示 -->
+    <section id="works" class="container">
+        <h2 class="section-title">作品展示</h2>
+        <div class="works">
+            <div class="work-item">
+                <img src="https://via.placeholder.com/300x200" alt="作品1" class="work-img">
+                <div class="work-info">
+                    <h3 class="work-title">个人博客系统</h3>
+                    <p class="work-desc">基于Vue.js和Node.js开发的个人博客系统，支持文章发布、评论、分类等功能。</p>
+                    <a href="#" class="work-btn">查看详情</a>
+                </div>
+            </div>
+            <div class="work-item">
+                <img src="https://via.placeholder.com/300x200" alt="作品2" class="work-img">
+                <div class="work-info">
+                    <h3 class="work-title">电商小程序</h3>
+                    <p class="work-desc">微信小程序电商平台，包含商品展示、购物车、支付等核心功能。</p>
+                    <a href="#" class="work-btn">查看详情</a>
+                </div>
+            </div>
+            <div class="work-item">
+                <img src="https://via.placeholder.com/300x200" alt="作品3" class="work-img">
+                <div class="work-info">
+                    <h3 class="work-title">数据可视化大屏</h3>
+                    <p class="work-desc">基于ECharts开发的企业数据可视化大屏，展示核心业务数据。</p>
+                    <a href="#" class="work-btn">查看详情</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 正在做什么 -->
+    <section id="doing" class="container">
+        <h2 class="section-title">正在做什么</h2>
+        <div class="doing">
+            <p class="doing-text">
+                目前正在学习AI相关的前端应用开发，尝试将大语言模型集成到个人项目中。同时正在开发一个开源的前端组件库，
+                致力于提升开发效率和用户体验。此外，也在整理过往的技术笔记，计划在博客上分享更多技术干货。
+            </p>
+            <div class="update-time">最后更新时间：2024年5月20日</div>
+            <button class="action-btn" id="updateBtn">刷新最新状态</button>
+        </div>
+    </section>
+
+    <!-- 联系方式 -->
+    <section id="contact" class="container">
+        <h2 class="section-title">联系方式</h2>
+        <div class="contact-links">
+            <div class="contact-item">
+                <i class="fas fa-envelope contact-icon"></i>
+                <span>example@163.com</span>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-phone contact-icon"></i>
+                <span>138****1234</span>
+            </div>
+            <div class="contact-item">
+                <i class="fab fa-github contact-icon"></i>
+                <span>github.com/example</span>
+            </div>
+            <div class="contact-item">
+                <i class="fab fa-weixin contact-icon"></i>
+                <span>wxid_example123</span>
+            </div>
+        </div>
+        <button class="action-btn" style="margin-top: 30px;">发送消息</button>
+    </section>
+    <!-- 引入外部JS文件 -->
+    <script src="./js/main.js"></script>
 </body>
 </html>

@@ -28,21 +28,40 @@
             });
         });
 
-        // 技能条动画
-        window.addEventListener('scroll', () => {
+        // 技能条动画（仅执行一次）
+        let skillsAnimated = false; // 标记是否已执行动画
+
+        function animateSkills() {
+            if (skillsAnimated) return; // 已执行则直接返回
+            
             const skillsSection = document.getElementById('skills');
             const skillsTop = skillsSection.getBoundingClientRect().top;
             const windowHeight = window.innerHeight;
             
+            // 当技能区域进入视口80%时执行动画
             if (skillsTop < windowHeight * 0.8) {
                 document.querySelectorAll('.skill-progress').forEach(progress => {
-                    const width = progress.style.width;
+                    // 获取目标宽度（从元素的data属性或style中读取）
+                    const targetWidth = progress.getAttribute('data-width') || progress.style.width;
+                    // 初始化宽度为0
                     progress.style.width = '0';
+                    // 触发重排后设置目标宽度，实现过渡动画
                     setTimeout(() => {
-                        progress.style.width = width;
-                    }, 100);
+                        progress.style.width = targetWidth;
+                    }, 1200);
                 });
+                skillsAnimated = true; // 标记为已执行
             }
+        }
+
+        // 页面加载时检查一次
+        window.addEventListener('load', animateSkills);
+        // 滚动时检查（但仅执行一次）
+        window.addEventListener('scroll', animateSkills);
+
+        // 保留原页面加载完成的动画
+        window.addEventListener('load', () => {
+            document.body.classList.add('loaded');
         });
 
         // 查看更多按钮交互

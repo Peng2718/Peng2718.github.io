@@ -49,7 +49,7 @@
         const moreInfoBtn = document.getElementById('moreInfoBtn');
         let infoExpanded = false;
         const originalDesc = document.querySelector('.profile-desc').textContent;
-        const extendedDesc = originalDesc + '\n\n此外，我还积极参与开源社区的贡献，翻译国外优质技术文档，并在技术社区分享自己的开发经验。在业余时间，我也会参与一些技术沙龙和线上分享会，与同行交流学习，共同进步。我始终相信，技术的价值在于解决实际问题，因此我会不断提升自己的技术能力，为创造更有价值的产品而努力。';
+        const extendedDesc = originalDesc + '\n\n此外，我还积极参与开源社区Github，并在技术社区分享自己的开发经验。我始终相信，技术的价值在于解决实际问题，因此我会不断提升自己的技术能力，为创造更有价值的产品而努力。';
 
         moreInfoBtn.addEventListener('click', () => {
             const descElement = document.querySelector('.profile-desc');

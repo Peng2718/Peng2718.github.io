@@ -199,50 +199,71 @@
 
     <!-- 作品展示 -->
     <section id="works" class="container">
-        <h2 class="section-title">作品展示</h2>
-        <div class="works">
-            <div class="work-item">
-                <img src="https://via.placeholder.com/300x200" alt="作品1" class="work-img">
-                <div class="work-info">
-                    <h3 class="work-title">个人网站</h3>
-                    <p class="work-desc">基于html，css和JavaScript开发的个人网站，通过GitHub网站托管实现静态部署</p>
-                    <a href="#" class="work-btn">查看详情</a>
+    <h2 class="section-title">作品展示</h2>
+    <div class="works">
+        <div class="work-item">
+            <img src="https://via.placeholder.com/300x200" alt="作品1" class="work-img">
+            <div class="work-info">
+                <h3 class="work-title">个人网站</h3>
+                <p class="work-desc">基于html，css和JavaScript开发的个人网站，通过GitHub网站托管实现静态部署</p>
+                <!-- 新增：默认隐藏的展开内容 -->
+                <div class="work-desc-expanded" style="display: none; margin-top: 10px; color: #bdbdbd;">
+                    个人网站开发通过AI协助，适配了移动端和PC端，包含导航栏切换、技能条动画、平滑滚动等交互效果
+                    ，使用GitHub Pages实现免费部署，域名采用GitHub默认域名。<br>现在你见到的就是具体效果
                 </div>
-            </div>
-            <div class="work-item">
-                <img src="https://via.placeholder.com/300x200" alt="作品2" class="work-img">
-                <div class="work-info">
-                    <h3 class="work-title">贪吃蛇</h3>
-                    <p class="work-desc">我的第一个游戏项目，基于C++的easyX库实现，是学习GitHub上一个基于控制台的版本改版的图形化贪吃蛇</p>
-                    <a href="#" class="work-btn">查看详情</a>
-                </div>
-            </div>
-            <div class="work-item">
-                <img src="https://via.placeholder.com/300x200" alt="作品3" class="work-img">
-                <div class="work-info">
-                    <h3 class="work-title">弹跳小球联机版</h3>
-                    <p class="work-desc">使用easyX库和socket网络编程写的游戏，可以实现两台电脑的局域网联机，其中使用的TCP协议</p>
-                    <a href="#" class="work-btn">查看详情</a>
-                </div>
-            </div>
-            <div class="work-item">
-                <img src="https://via.placeholder.com/300x200" alt="作品3" class="work-img">
-                <div class="work-info">
-                    <h3 class="work-title">屏幕弹窗</h3>
-                    <p class="work-desc">使用easyX库实现，当时网上看到好多这样的视频，我也跟着教程做了一个</p>
-                    <a href="#" class="work-btn">查看详情</a>
-                </div>
-            </div>
-            <div class="work-item">
-                <img src="https://via.placeholder.com/300x200" alt="作品3" class="work-img">
-                <div class="work-info">
-                    <h3 class="work-title">飞机打靶</h3>
-                    <p class="work-desc">使用easyX库，和弹跳小球一个是我的课设作业，这个比弹跳小球做的简单</p>
-                    <a href="#" class="work-btn">查看详情</a>
-                </div>
+                <button class="work-btn more-work-btn" data-work-id="work1">查看详情</button>
             </div>
         </div>
-    </section>
+        <div class="work-item">
+            <img src="https://via.placeholder.com/300x200" alt="作品2" class="work-img">
+            <div class="work-info">
+                <h3 class="work-title">贪吃蛇</h3>
+                <p class="work-desc">我的第一个游戏项目，基于C++的easyX库实现，是学习GitHub上一个基于控制台的版本改版的图形化贪吃蛇</p>
+                <div class="work-desc-expanded" style="display: none; margin-top: 10px; color: #bdbdbd;">
+                    贪吃蛇项目实现了方向键控制、食物随机生成、碰撞检测、分数统计功能，图形化界面使用easyX库绘制
+                    ，支持窗口大小自适应。具体可见GitHub
+                </div>
+                <button class="work-btn more-work-btn" data-work-id="work2">查看详情</button>
+            </div>
+        </div>
+        <div class="work-item">
+            <img src="https://via.placeholder.com/300x200" alt="作品3" class="work-img">
+            <div class="work-info">
+                <h3 class="work-title">弹跳小球联机版</h3>
+                <p class="work-desc">使用easyX库和socket网络编程写的游戏，可以实现两台电脑的局域网联机，其中使用的TCP协议</p>
+                <div class="work-desc-expanded" style="display: none; margin-top: 10px; color: #bdbdbd;">
+                    弹跳小球联机版是课设作业，基于TCP协议实现局域网通信，支持两台电脑实时同步小球位置和挡板操作
+                    ，其中信息传输顺序和结构体包装解决了网络延迟导致的画面不同步问题。具体可见GitHub
+                </div>
+                <button class="work-btn more-work-btn" data-work-id="work3">查看详情</button>
+            </div>
+        </div>
+        <div class="work-item">
+            <img src="https://via.placeholder.com/300x200" alt="作品3" class="work-img">
+            <div class="work-info">
+                <h3 class="work-title">屏幕弹窗</h3>
+                <p class="work-desc">使用easyX库实现，当时网上看到好多这样的视频，我也跟着教程做了一个</p>
+                <div class="work-desc-expanded" style="display: none; margin-top: 10px; color: #bdbdbd;">
+                    屏幕弹窗项目，支持自定义文字内容、弹窗大小、移动速度，可设置弹窗数量，实现了窗口置顶、透明背景效果
+                    。具体可见GitHub
+                </div>
+                <button class="work-btn more-work-btn" data-work-id="work4">查看详情</button>
+            </div>
+        </div>
+        <div class="work-item">
+            <img src="https://via.placeholder.com/300x200" alt="作品3" class="work-img">
+            <div class="work-info">
+                <h3 class="work-title">飞机打靶</h3>
+                <p class="work-desc">使用easyX库，和弹跳小球一个是我的课设作业，这个比弹跳小球做的简单</p>
+                <div class="work-desc-expanded" style="display: none; margin-top: 10px; color: #bdbdbd;">
+                    飞机打靶项目实现了飞机移动、子弹发射、靶子随机生成、击中计分功能，支持难度切换（靶子移动速度）
+                    ，界面包含开始/退出按钮。具体可见GitHub
+                </div>
+                <button class="work-btn more-work-btn" data-work-id="work5">查看详情</button>
+            </div>
+        </div>
+    </div>
+</section>
 
     <!-- 正在做什么 -->
     <section id="doing" class="container">

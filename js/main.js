@@ -13,7 +13,7 @@
                 e.preventDefault();
                 const targetId = this.getAttribute('href');
                 const targetElement = document.querySelector(targetId);
-                
+
                 if (targetElement) {
                     window.scrollTo({
                         top: targetElement.offsetTop - 80,
@@ -81,5 +81,26 @@
                 moreInfoBtn.textContent = '查看更多';
                 infoExpanded = false;
             }
+        });
+
+        // 作品详情展开/收起交互
+        document.querySelectorAll('.more-work-btn').forEach(btn => {
+            // 标记每个按钮的展开状态（初始为未展开）
+            let isExpanded = false;
+            btn.addEventListener('click', function () {
+                // 获取当前作品的展开内容容器
+                const expandedContent = this.previousElementSibling;
+                if (!isExpanded) {
+                    // 展开：显示内容，修改按钮文字
+                    expandedContent.style.display = 'block';
+                    this.textContent = '收起详情';
+                    isExpanded = true;
+                } else {
+                    // 收起：隐藏内容，恢复按钮文字
+                    expandedContent.style.display = 'none';
+                    this.textContent = '查看详情';
+                    isExpanded = false;
+                }
+            });
         });
     

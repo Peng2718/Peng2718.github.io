@@ -341,6 +341,17 @@
             color: #121212;
         }
 
+        /* 作品展开内容样式 */
+        .work-desc-expanded {
+            line-height: 1.8;
+            font-size: 1rem;
+        }
+
+        /* 保持按钮样式一致性 */
+        .more-work-btn {
+            margin-top: 10px;
+        }
+
         /* 正在做什么样式 */
         .doing {
             background-color: #181818;

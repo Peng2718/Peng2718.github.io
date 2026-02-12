@@ -8,10 +8,19 @@
         }
 
         body {
-            background-color: #121212;
+            background-image: url("../res/beijing.gif");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center center;
+            /* 新增：深色遮罩 + 混合模式（让遮罩和动图融合） */
+            background-color: rgba(18, 18, 18, 0.85); /* 主背景色，0.85是透明度（可调） */
+            background-blend-mode: overlay; /* 遮罩和动图混合，不影响动效 */
+            /* 原有样式 */
             color: #e0e0e0;
             line-height: 1.6;
             padding-bottom: 50px;
+            min-height: 100vh;
         }
 
         .container {
@@ -91,7 +100,6 @@
         .quote {
             text-align: center;
             padding: 80px 0;
-            background-color: #181818;
         }
 
         .quote-text {

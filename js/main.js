@@ -82,34 +82,4 @@
                 infoExpanded = false;
             }
         });
-
-        // 刷新状态按钮交互
-        const updateBtn = document.getElementById('updateBtn');
-        updateBtn.addEventListener('click', () => {
-            const updateTime = document.querySelector('.update-time');
-            const now = new Date();
-            const year = now.getFullYear();
-            const month = now.getMonth() + 1;
-            const day = now.getDate();
-            const hours = now.getHours().toString().padStart(2, '0');
-            const minutes = now.getMinutes().toString().padStart(2, '0');
-            
-            updateTime.textContent = `最后更新时间：${year}年${month}月${day}日 ${hours}:${minutes}`;
-            
-            // 按钮加载效果
-            updateBtn.textContent = '已刷新';
-            updateBtn.disabled = true;
-            updateBtn.style.opacity = '0.7';
-            
-            setTimeout(() => {
-                updateBtn.textContent = '刷新最新状态';
-                updateBtn.disabled = false;
-                updateBtn.style.opacity = '1';
-            }, 1500);
-        });
-
-        // 页面加载完成后的动画
-        window.addEventListener('load', () => {
-            document.body.classList.add('loaded');
-        });
     
